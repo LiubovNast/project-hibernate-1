@@ -307,7 +307,15 @@
             dataType: 'json',
             contentType: 'application/json;charset=UTF-8',
             async: false,
-            data: JSON.stringify({"name": value_name, "title": value_title, "race": value_race, "profession": value_profession, "level": value_level, "birthday": datetime, "banned": value_banned}),
+            data: JSON.stringify({
+                "name": value_name,
+                "title": value_title,
+                "race": value_race,
+                "profession": value_profession,
+                "level": value_level,
+                "birthday": datetime,
+                "banned": value_banned
+            }),
             success: function () {
                 $("#input_name_new").val("");
                 $("#input_title_new").val("");
